@@ -1,0 +1,142 @@
+:root{
+  --PRIMARY_COLOR: white;
+  --PRIMARY_COLOR2: green;
+  --NAVIGATON_BUTTONS_BGCOLOR: #ffffff80;
+  --NAVIGATON_BUTTONS_COLOR: blue;
+  --SLIDER_BGCOLOR: transparent;
+  --CAPTIONS_COLOR: #ffffff80;
+  --CAPTIONS_TEXT_COLOR: black;
+}
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #aaadaa;
+  margin-top: 40px;
+}
+
+.slider-container{
+  height: 400px;
+  width: 100%;
+  background-color: var(--SLIDER_BGCOLOR);
+  position: relative;
+  float: left;
+  display: block;
+}
+
+.nav{
+  position: absolute;
+  width: 70px;
+  height: 280px;
+  background-color: var(--NAVIGATON_BUTTONS_BGCOLOR);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  z-index: 9;
+}
+
+#arrow-next{
+  right: 0;
+}
+
+.arrow{
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+  border: 6px solid var(--NAVIGATON_BUTTONS_COLOR);
+  border-right: none;
+  border-bottom: none;
+}
+
+.inner-arrow{
+  height: 10px;
+  width: 10px;
+  border: 4px solid var(--NAVIGATON_BUTTONS_COLOR);
+  border-right: none;
+  border-bottom: none;
+  display: none;
+}
+
+.arrow-prev{
+  transform: rotate(-45deg);
+}
+
+#arrow-prev:hover .inner-arrow{
+  display: block;
+}
+
+.arrow-next{
+  transform: rotate(135deg);
+}
+
+#arrow-next:hover .inner-arrow{
+  display: block;
+}
+
+.slider-images{
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  /* overflow: none; */
+}
+
+.slider-images img{
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.navigation-btns{
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  background-color: var(--NAVIGATON_BUTTONS_BGCOLOR);
+  display: none;
+  z-index: 9;
+}
+
+.slides-button{
+  height: 10px;
+  width: 10px;
+  background-color: var(--NAVIGATON_BUTTONS_COLOR);
+  border: 5px solid var(--NAVIGATON_BUTTONS_COLOR);
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slides-button:first-child{
+  margin-left: 0;
+}
+
+.slides-button:hover{
+  background-color: transparent;
+}
+
+.slides-button-active{
+  background-color: transparent;
+}
+
+.captions-container{
+  height: auto;
+  min-height: 60px;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  background-color: var(--CAPTIONS_COLOR);
+  color: var(--CAPTIONS_TEXT_COLOR);
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+<div class="slider-container">
+    <div class="nav" id="arrow-prev">
+        <div class="arrow arrow-prev">
+            <div class="inner-arrow"></div>
+        </div>
+    </div>
+    <div class="nav" id="arrow-next">
+        <div class="arrow arrow-next">
+            <div class="inner-arrow"></div>
+        </div>
+    </div>
+    <div class="slider-images">
+        {%SLIDER_IMAGES%}
+    </div>
+    <div class="captions-container" id="caption-container">Caption 1</div>
+    <div class="navigation-btns">
+        {%SLIDER_BUTTONS%}
+    </div>
+</div>
+<script src="./library/lb-banner/main.js"></script>
+<script>
+    autoSlide({%SLIDER_TIME_INTERVAL%});
+</script>

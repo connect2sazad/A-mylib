@@ -1,0 +1,8 @@
+<nav>
+    <div class="logo">
+        {%LOGO_HERE%}
+    </div>
+    <ul>
+        {%MENU_ITEM%}
+    </ul>
+</nav>

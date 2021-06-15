@@ -1,0 +1,47 @@
+:root{
+  --PRIMARY_COLOR: blue;
+  --SECONDARY_COLOR: violet;
+  --MENU_TEXT_COLOR: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--PRIMARY_COLOR);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: var(--MENU_TEXT_COLOR);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: var(--SECONDARY_COLOR);
+}
+
+ul li ul{
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+ul li ul li{
+    clear: both;
+    width: auto;
+}
+
+ul li:hover > ul, ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}

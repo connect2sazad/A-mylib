@@ -1,0 +1,106 @@
+/* html, body{
+    background-image: url(./wallpaper.png);
+    background-repeat: none;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+} */
+:root{
+    --PRIMARY_COLOR: {%PRIMARY_COLOR%};
+    --SECONDARY_COLOR: {%SECONDARY_COLOR%};
+    --LOGO_TEXT_COLOR: {%LOGO_TEXT_COLOR%};
+    --MENU_TEXT_COLOR: {%MENU_TEXT_COLOR%};
+}
+
+nav{
+    width: 100%;
+    background-color: var(--PRIMARY_COLOR);
+    height: 40px;
+}
+
+.logo{
+    float: left;
+    padding: 8px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    color: var(--LOGO_TEXT_COLOR);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    width: auto;
+    float: right;
+    margin-right: 30px;
+}
+
+ul li{
+    display: block;
+    padding: 8px;
+    background-color: var(--PRIMARY_COLOR);
+    color: --var(--MENU_TEXT_COLOR);
+    cursor: pointer;
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+ul li:hover{
+    background-color: var(--SECONDARY_COLOR);
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--MENU_TEXT_COLOR);
+}
+
+ul li ul{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -8px;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+ul li ul li{
+    clear: both;
+    width: auto;
+}
+
+.arrow{
+    background-color: var(--PRIMARY_COLOR);
+    position: relative;
+    width: 20px;
+    margin-top: 10px;
+}
+
+.arrow::after{
+    content: " ";
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid var(--PRIMARY_COLOR);
+}
+
+ul li:hover > ul, ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.active{
+    background-color: var(--SECONDARY_COLOR);
+}

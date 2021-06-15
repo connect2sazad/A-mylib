@@ -1,0 +1,27 @@
+<div class="slider-container">
+    <div class="nav" id="arrow-prev">
+        <div class="arrow arrow-prev">
+            <div class="inner-arrow"></div>
+        </div>
+    </div>
+    <div class="nav" id="arrow-next">
+        <div class="arrow arrow-next">
+            <div class="inner-arrow"></div>
+        </div>
+    </div>
+    <div class="slider-images">
+        <img src="1.jpg" id="slide-0" alt="" data-caption="Caption 1">
+        <img src="2.jpg" id="slide-1" alt="" data-caption="Caption 2">
+        <img src="3.jpg" id="slide-2" alt="" data-caption="Caption 3">
+    </div>
+    <div class="captions-container" id="caption-container">Caption 1</div>
+    <div class="navigation-btns">
+        <div class="slides-button slides-button-active" id="slide-dots-0" onclick="slideIt(0)"></div>
+        <div class="slides-button" id="slide-dots-1" onclick="slideIt(1)"></div>
+        <div class="slides-button" id="slide-dots-2" onclick="slideIt(2)"></div>
+    </div>
+</div>
+<script src="main.js"></script>
+<script>
+    autoSlide(3000);
+</script>

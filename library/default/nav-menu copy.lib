@@ -1,0 +1,20 @@
+<nav>
+    <div class="logo">
+        {%Logo_Here%}
+    </div>
+    <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+            <a href="#">Services</a>
+            <ul>
+                <div class="arrow"></div>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
